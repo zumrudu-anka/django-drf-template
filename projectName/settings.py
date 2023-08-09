@@ -1,8 +1,12 @@
+import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-4-y)^ov&gt30!^q0$h)&4-xy@%narsvkda=+!a#t*8=ysudihm'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 DEBUG = True
 
@@ -90,5 +94,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {"DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"}
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Django DRF projectName",
+    "TITLE": "Django DRF Ecommerce",
 }

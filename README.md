@@ -9,4 +9,5 @@ Template Repository to Create Django &amp; DRF Project With Swagger
 - run `pip install -r requirements.txt` to install all required packages
 - run `python changeProjectName <your project name>` to change project name with your project name
   - Example: `python changeProjectName myProject`
+  - After change your project name, you can delete `changeProjectName.py` file
 - run `python manage.py spectacular --file schema.yml` to create schema file
