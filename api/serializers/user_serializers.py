@@ -34,7 +34,6 @@ class UserSerializerWithToken(UserSerializer):
         model = User
         fields = [
             "id",
-            "_id",
             "username",
             "email",
             "name",
