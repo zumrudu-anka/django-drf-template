@@ -13,7 +13,6 @@ from .views.user_views import (
 app_name = "api"
 
 urlpatterns = [
-    # path("", getRoutes, name="routes"),
     path("", getUsers, name="users"),
     path('login/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path("register/", registerUser, name="register"),
