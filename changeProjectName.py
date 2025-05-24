@@ -1,3 +1,13 @@
+def create_secret_key():
+    from django.core.management.utils import get_random_secret_key
+    return get_random_secret_key()
+
+
+def create_env_file(BASE_DIR):
+    env_file_path = BASE_DIR / ".env"
+    with open(env_file_path, "w+") as file:
+        file.write(f"SECRET_KEY = {create_secret_key()}")
+
 
 def main(newProjectName):
     import os
@@ -34,6 +44,8 @@ def main(newProjectName):
                 file.write(line)
 
     os.rename(PROJECT_DIR_PATH, BASE_DIR / newProjectName)
+
+    create_env_file(BASE_DIR)
 
 
 if __name__ == '__main__':
