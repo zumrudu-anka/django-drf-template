@@ -10,7 +10,6 @@ Template Repository to Create Django &amp; DRF Project With Swagger
 - run `python changeProjectName.py <your project name>` to change project name with your project name
   - Example: `python changeProjectName.py myProject`
   - After change your project name, you can delete `changeProjectName.py` file
-- create `.env` file and set your `SECRET_KEY` in the file.
 - run `python manage.py makemigrations`
 - run `python manage.py migrate`
 - run `python manage.py createsuperuser`
