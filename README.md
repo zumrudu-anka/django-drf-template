@@ -13,5 +13,8 @@ Template Repository to Create Django &amp; DRF Project With Swagger
 - create `.env` file and set your `SECRET_KEY` in the file.
 - run `python manage.py makemigrations`
 - run `python manage.py migrate`
-<!-- - run `python manage.py spectacular --file schema.yml` to create schema file -->
+- run `python manage.py createsuperuser`
 - run `python manage.py runserver`
+
+
+<!-- - run `python manage.py spectacular --file schema.yml` to create schema file -->
