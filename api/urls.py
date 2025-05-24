@@ -13,13 +13,12 @@ from .views.user_views import (
 app_name = "api"
 
 urlpatterns = [
-    path("", getUsers, name="users"),
-    path('login/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path("register/", registerUser, name="register"),
-    path("profile/", getUserProfile, name="users-profile"),
-    path("profile/update/", updateUserProfile, name="user-profile-update"),
-
-    path("<str:pk>/", getUserById, name="user"),
-    path("update/<str:pk>/", updateUser, name="user-update"),
-    path("delete/<str:pk>/", deleteUser, name="user-delete"),
+    path("users/", getUsers, name="users"),
+    path('users/login/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path("users/register/", registerUser, name="register"),
+    path("users/profile/", getUserProfile, name="users-profile"),
+    path("users/profile/update/", updateUserProfile, name="user-profile-update"),
+    path("users/<str:pk>/", getUserById, name="user"),
+    path("users/update/<str:pk>/", updateUser, name="user-update"),
+    path("users/delete/<str:pk>/", deleteUser, name="user-delete"),
 ]
