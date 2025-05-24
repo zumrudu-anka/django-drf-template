@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (
+from .views.user_views import (
     registerUser,
     getUserProfile,
     updateUserProfile,
@@ -23,5 +23,4 @@ urlpatterns = [
     path("<str:pk>/", getUserById, name="user"),
     path("update/<str:pk>/", updateUser, name="user-update"),
     path("delete/<str:pk>/", deleteUser, name="user-delete"),
-
 ]
