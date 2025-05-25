@@ -21,6 +21,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'api',
+    'user',
+
     # External Packages
     "rest_framework",
     "corsheaders",
@@ -141,6 +144,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'projectName.wsgi.application'
 
+AUTH_USER_MODEL = "user.User"
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -181,10 +186,10 @@ MEDIA_ROOT = "static/images"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-REST_FRAMEWORK = {"DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"}
+# REST_FRAMEWORK = {"DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema"}
 
-#SPECTACULAR_SETTINGS = {
+# SPECTACULAR_SETTINGS = {
 #    "TITLE": "Django DRF projectName",
-#}
+# }
 
 CORS_ALLOW_ALL_ORIGINS = True
